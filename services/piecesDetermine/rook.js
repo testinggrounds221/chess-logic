@@ -14,7 +14,9 @@ export default {
   },
 
   determineRook({ isWhitePiece, pieceBoxPosition }) {
+    this.printDet("-2", { pieceBoxPosition });
     this.determineRookWhiteBlack(isWhitePiece, { pieceBoxPosition });
+    this.printDet("-1", { pieceBoxPosition });
     this.cleanDetermineWhiteBlackRook(isWhitePiece, { pieceBoxPosition });
   },
 
@@ -39,7 +41,7 @@ export default {
   cleanDetermineWhiteBlackRook(isWhitePiece = true, { pieceBoxPosition }) {
     const col = +alphPosIn[pieceBoxPosition[0]];
     const row = +pieceBoxPosition[1];
-
+    this.printDet("0", { pieceBoxPosition });
     let shouldDeleteDeterminations = { value: false };
     for (let detRow = row + 1; detRow <= 8; detRow++) {
       const determinationPosition = `${alphPosOut[col]}${detRow}`;

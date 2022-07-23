@@ -16,7 +16,7 @@ export const initialGame = {
   g7: "black_pawn",
   h7: "black_pawn",
 
-  e5: "white_rook",
+  a1: "white_rook",
   b1: "white_knight",
   c1: "white_bishop",
   d1: "white_queen",
